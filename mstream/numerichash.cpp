@@ -22,8 +22,10 @@ int Numerichash::hash(double cur_node) {
 }
 
 void Numerichash::insert(double cur_node, double weight) {
+    // This function is always called with weight = 1, is parameter really needed?
     int bucket;
     bucket = hash(cur_node);
+    // Why do we use a 2D vector, when we only every acces and or use the first entry?
     count[0][bucket] += weight;
 }
 
